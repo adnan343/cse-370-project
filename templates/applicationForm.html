@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Collection Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            margin-top: 50px;
+        }
+        .form-content {
+            padding: 30px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+    </style>
+</head>
+<body>
+    {% include "nav.html" %}
+    <div class="container form-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-content">
+                    <h2 class="text-center">Information Collection Form</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn ID Link</label>
+                            <input type="url" class="form-control" id="linkedin" placeholder="Enter LinkedIn profile URL" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="education">Education</label>
+                            <textarea class="form-control" id="education" rows="5" placeholder="Enter education" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Enter location" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Can Drive</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="canDrive" id="canDriveYes" value="yes" required>
+                                <label class="form-check-label" for="canDriveYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="canDrive" id="canDriveNo" value="no" required>
+                                <label class="form-check-label" for="canDriveNo">No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">Profession</label>
+                            <input type="text" class="form-control" id="profession" placeholder="Enter profession" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="mt3">
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

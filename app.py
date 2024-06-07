@@ -89,5 +89,13 @@ def hello_world():
 def list_roles():
     return jsonify(roles)
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+@app.route('/apply')
+def apply():
+    return render_template("applicationForm.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
